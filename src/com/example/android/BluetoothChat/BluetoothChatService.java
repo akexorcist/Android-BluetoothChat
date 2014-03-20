@@ -280,9 +280,11 @@ public class BluetoothChatService {
             // Create a new listening server socket
             try {
                 if (secure) {
+                	Log.e("Check", "Secure - Name : " + NAME_SECURE + "\nUUID : " + MY_UUID_SECURE);
                     tmp = mAdapter.listenUsingRfcommWithServiceRecord(NAME_SECURE,
                         MY_UUID_SECURE);
                 } else {
+                	Log.e("Check", "Insecure - Name : " + NAME_SECURE + "\nUUID : " + MY_UUID_SECURE);
                     tmp = mAdapter.listenUsingInsecureRfcommWithServiceRecord(
                             NAME_INSECURE, MY_UUID_INSECURE);
                 }
